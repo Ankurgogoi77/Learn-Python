@@ -1,14 +1,14 @@
 # Essential dependencies
 pytest                 # For running tests
 pytest-cov             # For test coverage reports
-sonar-scanner-cli      # Required for SonarCloud analysis
+#sonar-scanner-cli      # Required for SonarCloud analysis
 
 # Linting tools (optional)
-flake8                 # Code style checking
-black                  # Code formatting
+#flake8                 # Code style checking
+#black                  # Code formatting
 
 # Frameworks (only if your project needs them)
-Django                 # For Django projects
-Flask                  # For Flask projects
+#Django                 # For Django projects
+#Flask                  # For Flask projects
 
 
