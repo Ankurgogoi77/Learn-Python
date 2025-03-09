@@ -20,7 +20,7 @@ jobs:
       - name: Set Up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"  # Change this if needed
+          python-version: "3.x"  # Change this if needed
 
       - name: Install Dependencies
         run: |
@@ -37,8 +37,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
         run: |
           sonar-scanner \
-            -Dsonar.organization=your-sonarcloud-org \
-            -Dsonar.projectKey=your-repo-name \
+            -Dsonar.organization="Ankur Gogoi" \
+            -Dsonar.projectKey="Learn-Python" \
             -Dsonar.python.version=3 \
             -Dsonar.sources=. \
             -Dsonar.coverageReportPaths=coverage.xml \
