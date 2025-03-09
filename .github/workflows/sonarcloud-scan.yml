@@ -32,14 +32,14 @@ jobs:
           pytest --cov=. --cov-report=xml  # Generates coverage.xml
 
       - name: Run SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets._GITHUB_TOKEN }}
-        run: |
-          sonar-scanner \
-            -Dsonar.organization="Ankur Gogoi" \
-            -Dsonar.projectKey="Learn-Python" \
-            -Dsonar.python.version=3 \
-            -Dsonar.sources=. \
-            -Dsonar.coverageReportPaths=coverage.xml \
-            -Dsonar.host.url=https://sonarcloud.io 
+        with:
+          args: >
+            -Dsonar.organization= 'Ankur Gogoi'
+            -Dsonar.projectKey='Learn-Python'
+            -Dsonar.python.version=3
+            -Dsonar.sources=.
+            -Dsonar.coverageReportPaths=coverage.xml
+
